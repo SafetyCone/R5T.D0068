@@ -2,11 +2,13 @@
 using System.Threading.Tasks;
 
 using R5T.D0067;
+using R5T.T0064;
 
 
 namespace R5T.D0068
 {
-    public class ContentRootApplicationProjectDirectoryPathProvider : IApplicationProjectDirectoryPathProvider
+    [ServiceImplementationMarker]
+    public class ContentRootApplicationProjectDirectoryPathProvider : IApplicationProjectDirectoryPathProvider, IServiceImplementation
     {
         private IContentRootDirectoryPathProvider ContentRootDirectoryPathProvider { get; }
 
